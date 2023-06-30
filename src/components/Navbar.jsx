@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { BiCameraMovie, BiSearchAlt2 } from 'react-icons/bi'
+import { BiCameraMovie, BiSearchAlt2, BiTv } from 'react-icons/bi'
 
 import './Navbar.css'
 
@@ -24,10 +24,15 @@ const Navbar = () => {
             <BiCameraMovie /> Biblioteca de filmes
           </Link>
         </h2>
+        <h2>
+          <Link to="/serie">
+            <BiTv /> Biblioteca de séries
+          </Link>
+        </h2>
         <form onSubmit={handleSubmit}>
             <input 
               type="text" 
-              placeholder="Procure por um filme"
+              placeholder="Procure por um filme ou série"
               onChange={(e) => setSearch(e.target.value)}
               value={search} 
             />

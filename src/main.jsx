@@ -6,6 +6,8 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Movie from './pages/Movie.jsx'
 import Search from './pages/Search.jsx'
+import Serie from './pages/Serie.jsx'
+import SeriesInfo from './pages/SeriesInfo.jsx'
 
 import './index.css'
 
@@ -15,7 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route element={<App />}>
           <Route path='/' element={<Home />} />
+          <Route path='/serie' element={<Serie />} />
           <Route path='movie/:id' element={<Movie />} />
+          <Route path='serie/:id' element={<SeriesInfo />} />
           <Route path='search' element={<Search />} />
         </Route>
       </Routes>
